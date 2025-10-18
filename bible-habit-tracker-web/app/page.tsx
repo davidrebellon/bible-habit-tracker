@@ -12,6 +12,9 @@ export default function Home() {
           height={38}
           priority
         />
+        <div className="font-mono items-center justify-items-center">
+          Lucas, Dean. I've been waiting for you...
+        </div>
         <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
           <li className="mb-2 tracking-[-.01em]">
             Get started by editing{" "}
