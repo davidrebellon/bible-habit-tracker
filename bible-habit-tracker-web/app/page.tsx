@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 export default function Home() {
-  let today = new Date()
-  let start = new Date('2025-10-18T10:00:00')
-  let timeDiff = Math.round((today - start)/3600000)
+  let today: number = (new Date()).getTime();
+  let start: number = (new Date('2025-10-18T10:00:00')).getTime();
+  let timeDiff: number = Math.round((today - start)/3600000)
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
