@@ -1,6 +1,9 @@
 import Image from "next/image";
 
 export default function Home() {
+  let today = new Date()
+  let start = new Date('2025-10-18T10:00:00')
+  let timeDiff = Math.round((today - start)/3600000)
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
@@ -13,8 +16,22 @@ export default function Home() {
           priority
         />
         <div className="font-mono items-center justify-items-center">
-          Lucas, Dean. I've been waiting for you...
+          Lucas, Dean. I've been waiting for you for {timeDiff} hours...
         </div>
+        <div className="font-mono items-center justify-items-center">
+          Here are some next steps
+        </div>
+        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
+          <li className="mb-2 tracking-[-.01em]">
+            Login to Github, Vercel, and Miro
+          </li>
+          <li className="mb-2 tracking-[-.01em]">
+            Review what's currently in Miro and start adding to your sections or asking questions
+          </li>
+          <li className="mb-2 tracking-[-.01em]">
+            Start poking around in your local dev environment (ask questions if you need to)
+          </li>
+        </ol>
         <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
           <li className="mb-2 tracking-[-.01em]">
             You can make more changes here by editing{" "}
