@@ -1,7 +1,8 @@
 import Image from "next/image";
+import  React, { useState } from 'react';
 
 export default function Home() {
-  let today: number = (new Date()).getTime();
+  const [today, setToday] = useState((new Date()).getTime());
   let start: number = (new Date('2025-10-18T10:00:00')).getTime();
   let timeDiff: number = Math.round((today - start)/3600000)
   return (
