@@ -1,10 +1,7 @@
 import Image from "next/image";
-import  React, { useState } from 'react';
+import Counter from "./components/counter";
 
 export default function Home() {
-  const [today, setToday] = useState((new Date()).getTime());
-  let start: number = (new Date('2025-10-18T10:00:00')).getTime();
-  let timeDiff: number = Math.round((today - start)/3600000)
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
@@ -16,9 +13,7 @@ export default function Home() {
           height={38}
           priority
         />
-        <div className="font-mono items-center justify-items-center">
-          Lucas, Dean. I've been waiting for you for {timeDiff} hours...
-        </div>
+        <Counter />
         <div className="font-mono items-center justify-items-center">
           Here are some next steps
         </div>
